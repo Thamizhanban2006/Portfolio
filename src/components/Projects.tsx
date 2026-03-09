@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
 import project1 from "@/assets/project1.jpg";
 import project2 from "@/assets/project2.jpg";
-import project3 from "@/assets/project3.jpg";
 
 const projects = [
   {
@@ -10,37 +9,38 @@ const projects = [
     title: "CODEBUDDY",
     category: "Full Stack Application",
     description:"Built a Q&A web platform (CodeBuddy) with categorized questions and an interactive UI using React. Implemented dynamic question rendering with clean layouts for seamless browsing.",
-    // image: project1,
+    image: project1,
     tech: ["React", "Node.js","Express", "Socket.IO", "MongoDB"],
-    liveUrl: "#",
-    githubUrl: "#"
+    liveUrl: "https://codebudd.netlify.app/",
+    githubUrl: "https://github.com/kalviumcommunity/S75_Thamizhanban_Capstone_CodeBuddy"
   },
 {
   id: 2,
-  title: "SOCKET SPHERE",
+  title: "CODE CLASH",
   category: "Web Application",
-  description: "An interactive real-time chat application with seamless messaging using Socket.IO. Features include instant communication, room-based chats, and a responsive interface.",
-  // image: project2,
-  tech: ["React", "Node.js", "Express", "Socket.IO", "MongoDB"],
-  liveUrl: "#",
-  githubUrl: "#"
+  description: "A competitive real-time coding battle platform where users join rooms, solve challenges head-to-head, and get instant results powered by live evaluation and seamless WebSocket communication.",
+  image: project2,
+tech: ["React", "Node.js", "Express", "Socket.IO", "MongoDB", "Judge0 API", "JWT Authentication"],
+  liveUrl: "https://codeclashhh.netlify.app/",
+  githubUrl: "https://github.com/Thamizhanban2006/code_clash"
 },
 
-  {
-    id: 3,
-    title: "QUANTUM COMMERCE",
-    category: "E-commerce Platform",
-    description: "A luxury e-commerce platform with advanced product customization, AR try-on features, and seamless payment integration. Built for scalability and performance.",
-    // image: project3,
-    tech: ["Next.js", "Stripe", "PostgreSQL", "Three.js"],
-    liveUrl: "#",
-    githubUrl: "#"
-  }
+  // {
+  //   id: 3,
+  //   title: "QUANTUM COMMERCE",
+  //   category: "E-commerce Platform",
+  //   description: "A luxury e-commerce platform with advanced product customization, AR try-on features, and seamless payment integration. Built for scalability and performance.",
+  //   // image: project3,
+  //   tech: ["Next.js", "Stripe", "PostgreSQL", "Three.js"],
+  //   liveUrl: "#",
+  //   githubUrl: "#"
+  // }
 ];
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-24 px-6 relative">
+    <section id="projects" className="py-24 px-6 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-cinematic-red/5 to-transparent pointer-events-none" />
       <div className="max-w-7xl mx-auto">
         
         {/* Header */}
@@ -59,11 +59,11 @@ const Projects = () => {
         </div>
 
         {/* Projects Grid */}
-        <div className="space-y-32">
+        <div className="space-y-24 md:space-y-28">
           {projects.map((project, index) => (
             <div 
               key={project.id} 
-              className={`grid lg:grid-cols-2 gap-16 items-center ${
+              className={`relative grid lg:grid-cols-2 gap-12 xl:gap-16 items-center p-6 md:p-8 rounded-xl border border-cinematic-red/15 bg-cinematic-black/40 backdrop-blur-sm transition-[var(--transition-cinematic)] hover:border-cinematic-red/35 hover:shadow-[var(--shadow-red-glow)] ${
                 index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
               }`}
             >
@@ -74,9 +74,11 @@ const Projects = () => {
                   <img 
                     src={project.image} 
                     alt={project.title}
-                    className="w-full h-[400px] object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-[280px] sm:h-[340px] lg:h-[400px] object-cover transition-transform duration-700 group-hover:scale-105 brightness-[0.78] contrast-125 saturate-[0.75]"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-cinematic-black/90 via-cinematic-black/20 to-transparent opacity-60 group-hover:opacity-30 transition-opacity duration-500" />
+                  <div className="absolute inset-0 bg-cinematic-red/25 mix-blend-multiply" />
+                  <div className="absolute inset-0 bg-gradient-to-br from-cinematic-red-dark/55 via-transparent to-cinematic-black/80" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-cinematic-black/95 via-cinematic-black/35 to-transparent opacity-80 group-hover:opacity-65 transition-opacity duration-500" />
                   
                   {/* Overlay */}
                   <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
@@ -104,6 +106,7 @@ const Projects = () => {
 
                 {/* Angular decoration */}
                 <div className="absolute -top-2 -right-2 w-16 h-16 bg-cinematic-red/20 transform rotate-45" />
+                <div className="absolute -bottom-2 -left-2 w-10 h-10 bg-cinematic-red-dark/35 transform rotate-45" />
               </div>
 
               {/* Project Details */}
@@ -134,7 +137,7 @@ const Projects = () => {
                 </div>
 
                 {/* Action Buttons */}
-                <div className="flex gap-4 pt-4">
+                <div className="flex flex-wrap gap-4 pt-4">
                   <Button 
                     className="btn-hero"
                     onClick={() => window.open(project.liveUrl, '_blank')}

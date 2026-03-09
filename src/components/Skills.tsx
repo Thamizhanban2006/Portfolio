@@ -6,63 +6,63 @@ const skillCategories = [
     title: "Frontend Development",
     icon: Code,
     skills: [
-      { name: "React/Next.js", level: 95 },
-      { name: "TypeScript", level: 90 },
-      { name: "Tailwind CSS", level: 95 },
-    //   { name: "Three.js", level: 80 }
+      { name: "React/Next.js", level: 88 },
+      { name: "TypeScript", level: 70 },
+      { name: "Tailwind CSS", level: 92 },
     ]
   },
   {
     title: "Backend Development",
     icon: Server,
     skills: [
-      { name: "Node.js", level: 90 },
-      { name: "Python", level: 85 },
-      { name: "GraphQL", level: 80 },
-      { name: "REST APIs", level: 95 }
+      { name: "Node.js", level: 85 },
+      { name: "Python", level: 75 },
+      { name: "GraphQL", level: 60 },
+      { name: "REST APIs", level: 90 }
     ]
   },
   {
     title: "Database & Cloud",
     icon: Database,
     skills: [
-      { name: "PostgreSQL", level: 85 },
-      { name: "MongoDB", level: 90 },
-      { name: "AWS", level: 80 },
-      { name: "Docker", level: 85 }
+      { name: "PostgreSQL", level: 75 },
+      { name: "MongoDB", level: 88 },
+      { name: "AWS", level: 65 },
+      { name: "Docker", level: 80 }
     ]
   },
   {
     title: "Mobile Development",
     icon: Smartphone,
     skills: [
-      { name: "React Native", level: 85 },
-      { name: "Flutter", level: 75 },
-      { name: "iOS/Android", level: 70 },
-      { name: "PWAs", level: 90 }
+      { name: "React Native", level: 65 },
+      { name: "Flutter", level: 50 },
+      { name: "iOS/Android", level: 55 },
+      { name: "PWAs", level: 85 }
     ]
   },
   {
     title: "Design & UX",
     icon: Palette,
     skills: [
-      { name: "Figma", level: 85 },
-      { name: "UI/UX Design", level: 80 },
-      { name: "Prototyping", level: 85 },
-      { name: "Design Systems", level: 90 }
+      { name: "Figma", level: 75 },
+      { name: "UI/UX Design", level: 70 },
+      { name: "Prototyping", level: 80 },
+      { name: "Design Systems", level: 75 }
     ]
   },
   {
     title: "DevOps & Tools",
     icon: Rocket,
     skills: [
-      { name: "Git/GitHub", level: 95 },
-      { name: "CI/CD", level: 85 },
-      { name: "Testing", level: 80 },
-      { name: "Performance", level: 90 }
+      { name: "Git/GitHub", level: 90 },
+      { name: "CI/CD", level: 70 },
+      { name: "Testing", level: 65 },
+      { name: "Performance", level: 75 }
     ]
   }
 ];
+
 
 const Skills = () => {
   return (

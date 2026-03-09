@@ -12,10 +12,11 @@ const About = () => {
               <div className="absolute inset-0 bg-gradient-to-tr from-cinematic-red/30 to-transparent rounded-lg transform rotate-3 scale-105" />
               <div className="relative overflow-hidden rounded-lg border border-cinematic-red/20">
                 <img 
-                  // src={profilePhoto} 
+                  src={profilePhoto}
                   alt="Thamizh Anban" 
-                  className="w-full h-[600px] object-cover filter grayscale hover:grayscale-0 transition-all duration-700"
+                  className="w-full h-[600px] object-cover brightness-[0.82] contrast-125 saturate-[0.78] hover:saturate-100 transition-all duration-700"
                 />
+                <div className="absolute inset-0 bg-cinematic-red/20 mix-blend-multiply" />
                 <div className="absolute inset-0 bg-gradient-to-t from-cinematic-black/80 via-transparent to-transparent" />
               </div>
             </div>
@@ -42,18 +43,13 @@ const About = () => {
 
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
               <p>
-                I'm a passionate full-stack developer  crafting 
-                immersive digital experiences. My approach combines technical precision with 
-                creative vision to deliver solutions that don't just function—they inspire.
-              </p>
-              <p>
-                Specializing in modern web technologies, I transform complex ideas into 
-                elegant, user-centered applications. From concept to deployment, I ensure 
-                every project tells a compelling story through code.
-              </p>
-              <p>
-                When I'm not coding, you'll find me exploring the latest in tech innovation, 
-                or perfecting my craft in UI/UX design.
+I’m a driven Software Product Engineering student and full-stack developer who loves building real-world, impact-focused applications. From real-time coding battle platforms to offline-first education systems, I enjoy transforming ideas into scalable, production-ready products.
+</p><p>
+My strength lies in the MERN stack, real-time systems with Socket.IO, authentication flows, API architecture, and deployment pipelines. I focus on writing clean, structured code while ensuring performance, usability, and thoughtful UI design.
+</p>
+Beyond development, I constantly sharpen my problem-solving skills through DSA, system design thinking, and hands-on project building. I don’t just learn technologies — I implement, test, deploy, and iterate until they’re industry-ready.
+<p>
+I believe in building products that are not only functional but competitive, scalable, and meaningful.
               </p>
             </div>
 
